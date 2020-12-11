@@ -1,9 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from './App';
+import { App, NavBar } from './App';
 import { FluentCustomizations } from '@uifabric/fluent-theme';
-import { Customizer, mergeStyles } from 'office-ui-fabric-react';
+import { Customizer, mergeStyles } from '@fluentui/react';
 import * as serviceWorker from './serviceWorker';
+
 
 // Inject some global styles
 mergeStyles({
@@ -18,10 +19,14 @@ mergeStyles({
 
 ReactDOM.render(
   <Customizer {...FluentCustomizations}>
+    <NavBar />
     <App />
+    
   </Customizer>,
   document.getElementById('root')
 );
+
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
