@@ -40,7 +40,6 @@ const navLinkGroups: INavLinkGroup[] = [
         url: 'http://example.com',
         expandAriaLabel: 'Expand Home section',
         collapseAriaLabel: 'Collapse Home section',
-       
       },
       {
         name: 'Pokemons',
@@ -113,7 +112,7 @@ export const App: React.FunctionComponent = () => {
       gap={15}
     >
       <img
-        src="../medias/logo/full_logov2.png"
+        src="medias/logo/full-logov2.png"
         alt="Pokedox logo"
       />
       <Text variant="xxLarge" styles={boldStyle}>

@@ -1,9 +1,20 @@
 # Pokedox
 
-Hi, just wanted to test the features in GitLab :)
-This one is to test the pull function
+Below is the changelog of the project.
+
+It has been commited with this particuliar format, pleaser not deviate from it while pushing :
+V.YY.MM.DD.HH
+And don't forget to put what your version was about down there!
 
 ---
+
+## V.20.12.12.12 :
+
+-Added @fluentui/react
+
+## V.20.12.11.14 :
+
+-Started the sidebar
 
 ## V.20.12.10.14 :
 
