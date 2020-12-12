@@ -31,3 +31,8 @@ And don't forget to put what your version was about down there!
 - Created a logo
 - Set up a name for the website
 - Started working on ReactJS (at least I made it work)
+
+## V.20.12.12.17 :
+
+- tried new code (image) to display logo
+- tried importing logo (still a work in progress)

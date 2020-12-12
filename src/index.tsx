@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
-import { App, NavBar, Search } from './App';
+import { Logo, NavBar, Search } from './App';
 import { FluentCustomizations } from '@uifabric/fluent-theme';
 import { Customizer, mergeStyles } from '@fluentui/react';
 import * as serviceWorker from './serviceWorker';
@@ -19,9 +19,9 @@ mergeStyles({
 
 ReactDOM.render(
   <Customizer {...FluentCustomizations}>
+    <Logo />
     <Search />
     <NavBar />
-    <App />
     
   </Customizer>,
   document.getElementById('root')

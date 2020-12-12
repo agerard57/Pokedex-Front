@@ -1,10 +1,12 @@
 import React from 'react';
-import { Stack, Text, Link, FontWeights } from '@fluentui/react';
+import { Stack } from '@fluentui/react';
 import { Nav, INavLink, INavStyles, INavLinkGroup } from '@fluentui/react/lib/Nav';
 import { SearchBox } from 'office-ui-fabric-react/lib/SearchBox';
 import { IStackTokens } from 'office-ui-fabric-react/lib/Stack';
-//import full_logov2 from '../medias/logo'
-
+import { Image } from '@fluentui/react/lib/Image';
+import { initializeIcons } from '@uifabric/icons';
+import logo from '../medias/logo/full_logov2.png';
+initializeIcons();
 
 const stackTokens: Partial<IStackTokens> = { childrenGap: 20 };
 
@@ -15,9 +17,11 @@ export const Search = () => {
       root: {
         width: 208,
         margin: '50 0',
-        display : 'flex'
+        display : 'flex',
+        icon : 'search'
       }
     }} tokens={stackTokens}>
+      
       <SearchBox placeholder="Search" onSearch={newValue => console.log('value is ' + newValue)} />
     </Stack>
   );
@@ -50,12 +54,14 @@ const navLinkGroups: INavLinkGroup[] = [
           {
             name: 'Sorted by name',
             url: 'http://msn.com',
+            icon: 'HalfAlpha',
             key: 'key1',
             target: '_blank',
           },
           {
             name: 'Sorted by type',
             url: 'http://msn.com',
+            icon: 'LightningBolt',
             key: 'key2',
             target: '_blank',
           },
@@ -66,7 +72,7 @@ const navLinkGroups: INavLinkGroup[] = [
       {
         name: 'Glossary',
         url: 'http://cnn.com',
-        icon: 'News',
+        icon: 'Dictionary',
         key: 'key7',
         target: '_blank',
       },
@@ -92,9 +98,8 @@ function _onLinkClick(ev?: React.MouseEvent<HTMLElement>, item?: INavLink) {
   }
 }
 
-const boldStyle = { root: { fontWeight: FontWeights.semibold } };
 
-export const App: React.FunctionComponent = () => {
+export const Logo: React.FunctionComponent = () => {
   return (
     <Stack
       horizontalAlign="center"
@@ -102,8 +107,7 @@ export const App: React.FunctionComponent = () => {
       //verticalFill
       styles={{
         root: {
-          width: '960px',
-          margin: '-10 auto',
+          width: 208,
           textAlign: 'center',
           color: '#605e5c',
           display : 'flex'
@@ -112,22 +116,12 @@ export const App: React.FunctionComponent = () => {
       gap={15}
     >
       <img
-        src="medias/logo/full-logov2.png"
+        src="../medias/logo/full_logov2.png"
         alt="Pokedox logo"
       />
-      <Text variant="xxLarge" styles={boldStyle}>
-        Welcome to Pokedox
-      </Text>
-      <Text variant="large">For a guide on Pokemons and their mysteries.</Text>
-      <Text variant="large" styles={boldStyle}>
-        Essential Links
-      </Text>
-      <Stack horizontal gap={15} horizontalAlign="baseline">
-        <Link href="https://developer.microsoft.com/en-us/fabric">All</Link>
-        <Link href="https://stackoverflow.com/questions/tagged/office-ui-fabric">Pokemon</Link>
-        <Link href="https://github.com/officeDev/office-ui-fabric-react/">Pokeballs</Link>
-        <Link href="https://twitter.com/officeuifabric">Trainer</Link>
-      </Stack>
+      <Image src="../medias/logo/full_logov2.png" />
+      
+      
       
       
     </Stack>
