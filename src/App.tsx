@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack } from '@fluentui/react';
+import { DefaultButton, IconButton, IIconProps, Stack } from '@fluentui/react';
 import { Nav, INavLink, INavStyles, INavLinkGroup } from '@fluentui/react/lib/Nav';
 import { SearchBox } from 'office-ui-fabric-react/lib/SearchBox';
 import { IStackTokens } from 'office-ui-fabric-react/lib/Stack';
@@ -10,19 +10,20 @@ initializeIcons();
 
 const stackTokens: Partial<IStackTokens> = { childrenGap: 20 };
 
-/* eslint-disable react/jsx-no-bind */
+const showNav: IIconProps = { iconName: 'DoubleChevronDown8' };
+
 export const Search = () => {
   return (
     <Stack styles={{
       root: {
         width: 208,
-        margin: '50 0',
         display : 'flex',
         icon : 'search'
       }
     }} tokens={stackTokens}>
       
       <SearchBox placeholder="Search" onSearch={newValue => console.log('value is ' + newValue)} />
+      <IconButton iconProps={showNav} title="NavBarButton" />
     </Stack>
   );
 };
@@ -98,6 +99,7 @@ function _onLinkClick(ev?: React.MouseEvent<HTMLElement>, item?: INavLink) {
   }
 }
 
+const navIcon: IIconProps = { iconName: 'GlobalNavButton' };
 
 export const Logo: React.FunctionComponent = () => {
   return (
@@ -120,6 +122,8 @@ export const Logo: React.FunctionComponent = () => {
         alt="Pokedox logo"
       />
       <Image src="../medias/logo/full_logov2.png" />
+
+      <IconButton iconProps={navIcon} title="NavBarButton" />
       
       
       
@@ -129,3 +133,8 @@ export const Logo: React.FunctionComponent = () => {
     
   );
 };
+
+
+function _alertClicked(): void {
+  alert('Clicked');
+}

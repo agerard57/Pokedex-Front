@@ -36,3 +36,8 @@ And don't forget to put what your version was about down there!
 
 - tried new code (image) to display logo
 - tried importing logo (still a work in progress)
+
+## V.20.12.12.18 :
+
+- Added icons for navigation bar
+- changed the css for those icons

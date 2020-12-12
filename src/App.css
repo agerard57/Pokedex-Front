@@ -29,6 +29,13 @@
   float : left;
 }
 
+IconButton{
+  float : right;
+  justify-content: right;
+  align-self: flex-end;
+  display : flex;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
