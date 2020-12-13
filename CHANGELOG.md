@@ -41,3 +41,8 @@ And don't forget to put what your version was about down there!
 
 - Added icons for navigation bar
 - changed the css for those icons
+
+## V.20.12.13.10 :
+
+- Changed name of folders for more consistency
+- Changed CSS

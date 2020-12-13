@@ -17,13 +17,12 @@ export const Search = () => {
     <Stack styles={{
       root: {
         width: 208,
-        display : 'flex',
         icon : 'search'
       }
     }} tokens={stackTokens}>
       
       <SearchBox placeholder="Search" onSearch={newValue => console.log('value is ' + newValue)} />
-      <IconButton iconProps={showNav} title="NavBarButton" />
+      <IconButton id="show" iconProps={showNav} title="ShowMore" />
     </Stack>
   );
 };
@@ -111,8 +110,7 @@ export const Logo: React.FunctionComponent = () => {
         root: {
           width: 208,
           textAlign: 'center',
-          color: '#605e5c',
-          display : 'flex'
+          color: '#605e5c'
         }
       }}
       gap={15}
