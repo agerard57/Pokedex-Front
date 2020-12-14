@@ -5,7 +5,7 @@ import { SearchBox } from 'office-ui-fabric-react/lib/SearchBox';
 import { IStackTokens } from 'office-ui-fabric-react/lib/Stack';
 import { Image } from '@fluentui/react/lib/Image';
 import { initializeIcons } from '@uifabric/icons';
-import logo from './medias/logo/full_logov2.png';
+import logo from './medias/logo/full_logo_smol.png';
 initializeIcons(); //Pour pouvoir utiliser les icones
 
 
@@ -65,23 +65,6 @@ const navLinkGroups: INavLinkGroup[] = [
         url: 'http://localhost:3000/full_logov2.png',
         key: 'key3',
         target: '_blank',
-        links: [
-          {
-            name: 'Sorted by name',
-            url: 'http://msn.com',
-            icon: 'HalfAlpha',
-            key: 'key1',
-            target: '_blank',
-          },
-          {
-            name: 'Sorted by type',
-            url: 'http://msn.com',
-            icon: 'LightningBolt',
-            key: 'key2',
-            target: '_blank',
-          },
-        ],
-        isExpanded: true,
       },
       
       {
@@ -134,7 +117,6 @@ export const Logo = () => {
       gap={15}
     >
       
-
       <Image src={logo} />
 
       <IconButton iconProps={navIcon} title="NavBarButton" />

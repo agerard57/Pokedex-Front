@@ -7,6 +7,9 @@ V.YY.MM.DD.HH
 And don't forget to put what your version was about down there!
 
 ---
+## V.20.12.14.17.2 :
+
+- rEMOVED THE SORTED BUTTONS
 
 ## V.20.12.12.12 :
 
