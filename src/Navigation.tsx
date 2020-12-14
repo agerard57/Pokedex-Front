@@ -5,13 +5,25 @@ import { SearchBox } from 'office-ui-fabric-react/lib/SearchBox';
 import { IStackTokens } from 'office-ui-fabric-react/lib/Stack';
 import { Image } from '@fluentui/react/lib/Image';
 import { initializeIcons } from '@uifabric/icons';
-import logo from '../medias/logo/full_logov2.png';
-initializeIcons();
+import logo from './medias/logo/full_logov2.png';
+initializeIcons(); //Pour pouvoir utiliser les icones
+
+
 
 const stackTokens: Partial<IStackTokens> = { childrenGap: 20 };
 
-const showNav: IIconProps = { iconName: 'DoubleChevronDown8' };
+//Beginning : is icon button clicked ?
+export interface IButtonExampleProps {
+  // These are set based on the toggles shown above the examples (not needed in real code)
+  disabled?: boolean;
+  checked?: boolean;
+}
+//DDefines wich icon (the double arrows down)
+const showNav: IIconProps = { iconName: 'DoubleChevronDown8'};
+//same for the burger icon
+const navIcon: IIconProps = { iconName: 'GlobalNavButton' };
 
+//Code for the search bar
 export const Search = () => {
   return (
     <Stack styles={{
@@ -22,11 +34,13 @@ export const Search = () => {
     }} tokens={stackTokens}>
       
       <SearchBox placeholder="Search" onSearch={newValue => console.log('value is ' + newValue)} />
-      <IconButton id="show" iconProps={showNav} title="ShowMore" />
+      <IconButton id="show" iconProps={showNav} title="ShowMore"  />
+    
     </Stack>
   );
 };
 
+//Style of the navbar
 const navStyles: Partial<INavStyles> = {
   root: {
     width: 208,
@@ -36,6 +50,7 @@ const navStyles: Partial<INavStyles> = {
   },
 };
 
+//Buttons in navbar
 const navLinkGroups: INavLinkGroup[] = [
   {
     links: [
@@ -47,7 +62,7 @@ const navLinkGroups: INavLinkGroup[] = [
       },
       {
         name: 'Pokemons',
-        url: 'http://example.com',
+        url: 'http://localhost:3000/full_logov2.png',
         key: 'key3',
         target: '_blank',
         links: [
@@ -80,10 +95,11 @@ const navLinkGroups: INavLinkGroup[] = [
   },
 ];
 
+//Code for nav bar
 export const NavBar: React.FunctionComponent = () => {
   return (
     <Nav
-      onLinkClick={_onLinkClick}
+      onLinkClick={Header}
       //selectedKey="key3"
       ariaLabel="Nav basic example"
       styles={navStyles}
@@ -92,15 +108,17 @@ export const NavBar: React.FunctionComponent = () => {
   );
 };
 
+//One example of function onclick
 function _onLinkClick(ev?: React.MouseEvent<HTMLElement>, item?: INavLink) {
   if (item && item.name === 'Glossary') {
     alert('Glossary link clicked');
   }
+  
 }
 
-const navIcon: IIconProps = { iconName: 'GlobalNavButton' };
 
-export const Logo: React.FunctionComponent = () => {
+// code for the logo + burger icon
+export const Logo = () => {
   return (
     <Stack
       horizontalAlign="center"
@@ -115,15 +133,11 @@ export const Logo: React.FunctionComponent = () => {
       }}
       gap={15}
     >
-      <img
-        src="../medias/logo/full_logov2.png"
-        alt="Pokedox logo"
-      />
-      <Image src="../medias/logo/full_logov2.png" />
+      
+
+      <Image src={logo} />
 
       <IconButton iconProps={navIcon} title="NavBarButton" />
-      
-      
       
       
     </Stack>
@@ -132,6 +146,10 @@ export const Logo: React.FunctionComponent = () => {
   );
 };
 
+console.log(logo);
+function Header(){
+  return <img src={logo}></img>;
+}
 
 function _alertClicked(): void {
   alert('Clicked');

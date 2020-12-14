@@ -46,3 +46,8 @@ And don't forget to put what your version was about down there!
 
 - Changed name of folders for more consistency
 - Changed CSS
+
+## V.20.12.14.17 :
+
+- Put css in folders
+- Logo loaded
