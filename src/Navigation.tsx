@@ -6,6 +6,8 @@ import { IStackTokens } from 'office-ui-fabric-react/lib/Stack';
 import { Image } from '@fluentui/react/lib/Image';
 import { initializeIcons } from '@uifabric/icons';
 import logo from './medias/logo/full_logo_smol.png';
+import pokeballIcon from './medias/icons/Pokeball.js';
+
 initializeIcons(); //Pour pouvoir utiliser les icones
 
 
@@ -18,7 +20,7 @@ export interface IButtonExampleProps {
   disabled?: boolean;
   checked?: boolean;
 }
-//DDefines wich icon (the double arrows down)
+//Defines which icon (the double arrows down)
 const showNav: IIconProps = { iconName: 'DoubleChevronDown8'};
 //same for the burger icon
 const navIcon: IIconProps = { iconName: 'GlobalNavButton' };
@@ -61,8 +63,9 @@ const navLinkGroups: INavLinkGroup[] = [
         collapseAriaLabel: 'Collapse Home section',
       },
       {
-        name: 'Pokemons',
+        name: 'Pokemon',
         url: 'http://localhost:3000/full_logov2.png',
+        icon: {pokeballIcon},
         key: 'key3',
         target: '_blank',
       },
