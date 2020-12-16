@@ -12,11 +12,32 @@ And don't forget to put what your version was about down there!
 
 - Removed bips and bops of code
 - Removed the logo
+- npm run svgr - used to convert .svg into .js
 
 
 ## V.20.12.14.17.2 :
 
 - Removed the sort buttons
+
+## V.20.12.14.17 :
+
+- Put css in folders
+- Logo loaded
+
+## V.20.12.13.10 :
+
+- Changed name of folders for more consistency
+- Changed CSS
+
+## V.20.12.12.18 :
+
+- Added icons for navigation bar
+- changed the css for those icons
+
+## V.20.12.12.17 :
+
+- tried new code (image) to display logo
+- tried importing logo (still a work in progress)
 
 ## V.20.12.12.12 :
 
@@ -42,22 +63,9 @@ And don't forget to put what your version was about down there!
 - Set up a name for the website
 - Started working on ReactJS (at least I made it work)
 
-## V.20.12.12.17 :
 
-- tried new code (image) to display logo
-- tried importing logo (still a work in progress)
 
-## V.20.12.12.18 :
 
-- Added icons for navigation bar
-- changed the css for those icons
 
-## V.20.12.13.10 :
 
-- Changed name of folders for more consistency
-- Changed CSS
 
-## V.20.12.14.17 :
-
-- Put css in folders
-- Logo loaded

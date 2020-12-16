@@ -24,6 +24,7 @@ export interface IButtonExampleProps {
 const showNav: IIconProps = { iconName: 'DoubleChevronDown8'};
 //same for the burger icon
 const navIcon: IIconProps = { iconName: 'GlobalNavButton' };
+const PIcon : IIconProps = { iconName: 'pokeballIcon'}
 
 //Code for the search bar
 export const Search = () => {
@@ -37,7 +38,7 @@ export const Search = () => {
       
       <SearchBox placeholder="Search" onSearch={newValue => console.log('value is ' + newValue)} />
       <IconButton id="show" iconProps={showNav} title="ShowMore"  />
-    
+      <IconButton id="show" iconProps={PIcon} title="ShowMore"  />
     </Stack>
   );
 };
@@ -65,7 +66,7 @@ const navLinkGroups: INavLinkGroup[] = [
       {
         name: 'Pokemon',
         url: 'http://localhost:3000/full_logov2.png',
-        icon: {pokeballIcon},
+        icon: 'killMe',
         key: 'key3',
         target: '_blank',
       },
