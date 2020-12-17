@@ -4,6 +4,7 @@ import { Logo, NavBar, Search } from './Navigation';
 import { FluentCustomizations } from '@uifabric/fluent-theme';
 import { Customizer, mergeStyles } from '@fluentui/react';
 import * as serviceWorker from './serviceWorker';
+import './style/Navigation.css';
 
 
 // Inject some global styles
@@ -22,6 +23,7 @@ ReactDOM.render(
     <Logo />
     <Search />
     <NavBar />
+    
     
   </Customizer>,
   document.getElementById('root')

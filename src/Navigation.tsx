@@ -8,6 +8,7 @@ import { initializeIcons } from '@uifabric/icons';
 import logo from './medias/logo/full_logo_smol.png';
 import pokeballIcon from './medias/icons/Pokeball.js';
 import { registerIcons } from 'office-ui-fabric-react/lib/Styling';
+import './style/Navigation.css';
 
 initializeIcons(); //Pour pouvoir utiliser les icones
 
@@ -68,7 +69,10 @@ export const Search = () => {
     }} tokens={stackTokens}>
       
       <SearchBox placeholder="Search" onSearch={newValue => console.log('value is ' + newValue)} />
-      <IconButton id="show" iconProps={showNav} title="ShowMore"  />
+      <IconButton id="show" className="show" iconProps={showNav} title="ShowMore"  />
+      <IconButton className="icon" iconProps={navIcon} title="NavBarButton" />
+      
+      
     </Stack>
   );
 };
@@ -89,7 +93,7 @@ const navLinkGroups: INavLinkGroup[] = [
     links: [
       {
         name: 'All',
-        url: 'http://example.com',
+        url: 'http://localhost:3000/next.html',
         expandAriaLabel: 'Expand Home section',
         collapseAriaLabel: 'Collapse Home section',
       },
@@ -153,7 +157,7 @@ export const Logo = () => {
       
       <Image src={logo} />
 
-      <IconButton iconProps={navIcon} title="NavBarButton" />
+      
       
       
     </Stack>

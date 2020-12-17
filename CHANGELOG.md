@@ -8,9 +8,13 @@ And don't forget to put what your version was about down there!
 
 ---
 
+## V.20.12.17.19 :
+
+- CSS linked
+
 ## V.20.12.16.16 :
 
-- Aded the pokeball logo to the list
+- Added the pokeball logo to the list
 
 ## V.20.12.15 :
 
