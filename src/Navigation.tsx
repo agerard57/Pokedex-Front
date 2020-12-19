@@ -70,7 +70,7 @@ export const Search = () => {
       
       <SearchBox placeholder="Search" onSearch={newValue => console.log('value is ' + newValue)} />
       <IconButton id="show" className="show" iconProps={showNav} title="ShowMore"  />
-      <IconButton className="icon" iconProps={navIcon} title="NavBarButton" />
+      
       
       
     </Stack>
@@ -156,6 +156,7 @@ export const Logo = () => {
     >
       
       <Image src={logo} />
+      <IconButton className="icon" iconProps={navIcon} title="NavBarButton" />
 
       
       
