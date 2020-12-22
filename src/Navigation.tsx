@@ -10,7 +10,16 @@ import pokeballIcon from './medias/icons/Pokeball.js';
 import { registerIcons } from 'office-ui-fabric-react/lib/Styling';
 import './style/Navigation.css';
 
+import {
+  Route,
+  NavLink,
+  HashRouter
+} from "react-router-dom";
+
+
+
 initializeIcons(); //Pour pouvoir utiliser les icones
+
 
 
 
@@ -41,8 +50,6 @@ registerIcons({
     ),
   },
 });
-
-
   
 
 const stackTokens: Partial<IStackTokens> = { childrenGap: 20 };
@@ -93,13 +100,13 @@ const navLinkGroups: INavLinkGroup[] = [
     links: [
       {
         name: 'All',
-        url: 'http://localhost:3000/next.html',
+        url: '/pokemon/handler',
         expandAriaLabel: 'Expand Home section',
         collapseAriaLabel: 'Collapse Home section',
       },
       {
         name: 'Pokemon',
-        url: 'http://localhost:3000/full_logov2.png',
+        url: './pokemon/handler.tsx',
         icon: 'poke-svg',
         key: 'key3',
         target: '_blank',
@@ -107,7 +114,7 @@ const navLinkGroups: INavLinkGroup[] = [
       
       {
         name: 'Glossary',
-        url: 'http://cnn.com',
+        url: '\pokemon\handler.tsx',
         icon: 'Dictionary',
         key: 'key7',
         target: '_blank',
@@ -119,13 +126,16 @@ const navLinkGroups: INavLinkGroup[] = [
 //Code for nav bar
 export const NavBar: React.FunctionComponent = () => {
   return (
+    <HashRouter>
     <Nav
       onLinkClick={Header}
       //selectedKey="key3"
       ariaLabel="Nav basic example"
       styles={navStyles}
       groups={navLinkGroups}
+      
     />
+    </HashRouter>
   );
 };
 
@@ -168,8 +178,12 @@ export const Logo = () => {
 };
 
 console.log(logo);
-function Header(){
-  return <img src={logo}></img>;
+function Header(ev?: React.MouseEvent<HTMLElement>, item?: INavLink){
+  if (item && item.name === 'Glossary') {
+    return(<HashRouter>
+      <div>
+          <NavLink to="/pokemon/handler">Hanfler</NavLink></div></HashRouter>);
+  }
 }
 
 function _alertClicked(): void {

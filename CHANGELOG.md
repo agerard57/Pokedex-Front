@@ -8,6 +8,10 @@ And don't forget to put what your version was about down there!
 
 ---
 
+## V.20.12.22.16 :
+
+- Still testing for changing pages
+
 ## V.20.12.19.18 :
 
 - List of pokemon can be handled as the list in pokemon.tsx

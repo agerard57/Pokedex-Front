@@ -1,12 +1,11 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
-import { Logo, NavBar, Search } from './Navigation';
-import { PokeList } from './pokemon/pokemon';
+import { Logo } from '../Navigation';
+import { PokeList } from './pokemon';
 import { FluentCustomizations } from '@uifabric/fluent-theme';
 import { Customizer, mergeStyles } from '@fluentui/react';
-import * as serviceWorker from './serviceWorker';
-import './style/Navigation.css';
-
+import * as serviceWorker from '../serviceWorker';
+import '../style/Navigation.css';
 
 
 // Inject some global styles
@@ -23,8 +22,8 @@ mergeStyles({
 ReactDOM.render(
   <Customizer {...FluentCustomizations}>
     <Logo />
-    <Search />
-    <NavBar />
+    
+    <PokeList />
     
     
   </Customizer>,
