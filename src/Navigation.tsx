@@ -16,6 +16,10 @@ import {
   HashRouter
 } from "react-router-dom";
 
+import Home from "./Home";
+import ListP from "./pokemon/pokemon";
+import Glossary from "./Glossary";
+
 
 
 initializeIcons(); //Pour pouvoir utiliser les icones
@@ -64,6 +68,9 @@ export interface IButtonExampleProps {
 const showNav: IIconProps = { iconName: 'DoubleChevronDown8'};
 //same for the burger icon
 const navIcon: IIconProps = { iconName: 'GlobalNavButton' };
+const pokeIcon: IIconProps = { iconName: 'poke-svg' };
+const dictionary: IIconProps = { iconName: 'Dictionary' };
+const home: IIconProps = { iconName: 'Home' };
 
 //Code for the search bar
 export const Search = () => {
@@ -138,6 +145,26 @@ export const NavBar: React.FunctionComponent = () => {
     </HashRouter>
   );
 };
+
+
+export const Nav2 : React.FunctionComponent = () => {
+  return(
+  <HashRouter>
+        <div>
+          <ul className="header">
+            <li><IconButton id="pokeb" className="pokeb" iconProps={home} title="Pokeball"  /><NavLink to="/">Home</NavLink></li>
+            <li><IconButton id="pokeb" className="pokeb" iconProps={pokeIcon} title="Pokeball"  /><NavLink to="/pokemon/pokemon">Pokemon</NavLink></li>
+            <li><IconButton id="dico" className="dico" iconProps={dictionary} title="Glossary"  /><NavLink to="/Glossary">Glossary</NavLink></li>
+          </ul>
+          <div className="content">
+            <Route exact path="/" component={Home}/>
+            <Route path="/pokemon/pokemon" component={ListP}/>
+            <Route path="/Glossary" component={Glossary}/>
+          </div>
+        </div>
+      </HashRouter>
+  );
+}
 
 //One example of function onclick
 function _onLinkClick(ev?: React.MouseEvent<HTMLElement>, item?: INavLink) {

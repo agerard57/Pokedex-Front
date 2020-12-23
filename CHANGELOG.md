@@ -8,6 +8,10 @@ And don't forget to put what your version was about down there!
 
 ---
 
+## V.20.12.23.18 :
+
+- Navbar that actually works
+
 ## V.20.12.22.18 :
 
 - Made several cursors
