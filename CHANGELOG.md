@@ -8,6 +8,11 @@ And don't forget to put what your version was about down there!
 
 ---
 
+## V.20.12.22.18 :
+
+- Made several cursors
+
+
 ## V.20.12.22.16 :
 
 - Still testing for changing pages
