@@ -1,6 +1,5 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
-import { Logo, NavBar, Search } from './Navigation';
 import { Nav2 } from './Navigation'
 import { PokeList } from './pokemon/pokemon';
 import { FluentCustomizations } from '@uifabric/fluent-theme';
@@ -23,12 +22,7 @@ mergeStyles({
 
 ReactDOM.render(
   <Customizer {...FluentCustomizations}>
-    <Logo />
-    <Search />
-    
-    
     <Nav2 />
-    
   </Customizer>,
   document.getElementById('root')
 );
