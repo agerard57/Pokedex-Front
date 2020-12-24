@@ -1,7 +1,6 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import { Logo } from '../Navigation';
-import { PokeList } from './pokemon';
 import { FluentCustomizations } from '@uifabric/fluent-theme';
 import { Customizer, mergeStyles } from '@fluentui/react';
 import * as serviceWorker from '../serviceWorker';
@@ -23,7 +22,6 @@ ReactDOM.render(
   <Customizer {...FluentCustomizations}>
     <Logo />
     
-    <PokeList />
     
     
   </Customizer>,

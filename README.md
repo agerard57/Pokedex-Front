@@ -8,6 +8,10 @@ And don't forget to put what your version was about down there!
 
 ---
 
+## V.20.12.24.15 :
+
+- New way of displaying the pokemons
+
 ## V.20.12.24.05 :
 
 - Resolved a push error (see https://gitlab.com/pokedex-iut/pokedex-front/-/commit/4d31d1d78408613537f9e47c2c90890aaaa5cbc9)

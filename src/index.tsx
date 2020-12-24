@@ -1,7 +1,6 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import { Nav2 } from './Navigation'
-import { PokeList } from './pokemon/pokemon';
 import { FluentCustomizations } from '@uifabric/fluent-theme';
 import { Customizer, mergeStyles } from '@fluentui/react';
 import * as serviceWorker from './serviceWorker';

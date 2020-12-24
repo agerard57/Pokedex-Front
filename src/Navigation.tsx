@@ -20,6 +20,7 @@ import {
 import Home from "./Home";
 import ListP from "./pokemon/pokemon";
 import Glossary from "./Glossary";
+import Pokemons from "./pokemon/pokemon2";
 
 
 
@@ -95,12 +96,12 @@ export const Nav2 : React.FunctionComponent = () => {
           <ul className="header">
             <br />
             <li><IconButton id="pokeb" className="pokeb" iconProps={home} title="Pokeball"  /><NavLink className="cat" to="/">Home</NavLink></li>
-                        <br />
+                        <br /> //TODO remove br and increase padding
 
             <li><IconButton id="pokeb" className="pokeb" iconProps={pokeIcon} title="Pokeball"  /><NavLink to="/pokemon/pokemon">Pokemon</NavLink></li>
                         <br />
 
-            <li><IconButton id="pokeb" className="pokeb" iconProps={pokeIcon} title="Items"  /><NavLink to="/pokemon/pokemon">Items</NavLink></li>
+            <li><IconButton id="pokeb" className="pokeb" iconProps={pokeIcon} title="Items"  /><NavLink to="/pokemon/pokemon2">Items</NavLink></li>
                         <br />
 
             <li><IconButton id="pokeb" className="pokeb" iconProps={pokeIcon} title="Moves"  /><NavLink to="/pokemon/pokemon">Moves</NavLink></li>
@@ -114,6 +115,7 @@ export const Nav2 : React.FunctionComponent = () => {
           <div className="content">
             <Route exact path="/" component={Home}/>
             <Route path="/pokemon/pokemon" component={ListP}/>
+            <Route path="/pokemon/pokemon2" component={Pokemons}/>
             <Route path="/Glossary" component={Glossary}/></div>
         </div>
       </HashRouter>
