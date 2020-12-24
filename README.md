@@ -8,6 +8,25 @@ And don't forget to put what your version was about down there!
 
 ---
 
+## V.24.12.20.05 :
+
+- Sorted the multi-page thingy
+- Actual CSS this time
+- Reworked the .tsx files
+- Added "Items" and "Moves" to the menu bar
+- Added a backgroung image (it's .psd is inside the "assets" folder, if you want to temper with it)
+- Added a font (Config Condensed Sans)
+- Merry Christmas
+
+TODO:
+- Change font
+- Change color of icons
+- Change Icons
+- Add this to the trello
+- Different cursor color (dark on dark don't work, who would've thought ?)
+- Beautify the files, for god's sake
+
+
 ## V.20.12.23.18 :
 
 - Navbar that actually works

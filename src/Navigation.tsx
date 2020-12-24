@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import { DefaultButton, IconButton, IIconProps, Stack } from '@fluentui/react';
 import { Nav, INavLink, INavStyles, INavLinkGroup } from '@fluentui/react/lib/Nav';
 import { SearchBox } from 'office-ui-fabric-react/lib/SearchBox';
 import { IStackTokens } from 'office-ui-fabric-react/lib/Stack';
 import { Image } from '@fluentui/react/lib/Image';
 import { initializeIcons } from '@uifabric/icons';
-import logo from './medias/logo/full_logo_smol.png';
+import logo from './medias/logo/full_logo.png';
+
 import pokeballIcon from './medias/icons/Pokeball.js';
 import { registerIcons } from 'office-ui-fabric-react/lib/Styling';
 import './style/Navigation.css';
@@ -54,7 +55,6 @@ registerIcons({
     ),
   },
 });
-  
 
 const stackTokens: Partial<IStackTokens> = { childrenGap: 20 };
 
@@ -72,9 +72,15 @@ const pokeIcon: IIconProps = { iconName: 'poke-svg' };
 const dictionary: IIconProps = { iconName: 'Dictionary' };
 const home: IIconProps = { iconName: 'Home' };
 
-//Code for the search bar
-export const Search = () => {
-  return (
+
+export const Nav2 : React.FunctionComponent = () => {
+  return(
+    <Fragment>
+      <HashRouter>
+        <div>
+        <div className="sidenav">
+          <img alt='logo' style={{ width: 208 }} src={String(logo)} />
+              <div>
     <Stack styles={{
       root: {
         width: 208,
@@ -84,85 +90,34 @@ export const Search = () => {
       
       <SearchBox placeholder="Search" onSearch={newValue => console.log('value is ' + newValue)} />
       <IconButton id="show" className="show" iconProps={showNav} title="ShowMore"  />
-      
-      
-      
-    </Stack>
-  );
-};
-
-//Style of the navbar
-const navStyles: Partial<INavStyles> = {
-  root: {
-    width: 208,
-    boxSizing: 'border-box',
-    border: '1px solid #eee',
-    overflowY: 'auto',
-  },
-};
-
-//Buttons in navbar
-const navLinkGroups: INavLinkGroup[] = [
-  {
-    links: [
-      {
-        name: 'All',
-        url: '/pokemon/handler',
-        expandAriaLabel: 'Expand Home section',
-        collapseAriaLabel: 'Collapse Home section',
-      },
-      {
-        name: 'Pokemon',
-        url: './pokemon/handler.tsx',
-        icon: 'poke-svg',
-        key: 'key3',
-        target: '_blank',
-      },
-      
-      {
-        name: 'Glossary',
-        url: '\pokemon\handler.tsx',
-        icon: 'Dictionary',
-        key: 'key7',
-        target: '_blank',
-      },
-    ],
-  },
-];
-
-//Code for nav bar
-export const NavBar: React.FunctionComponent = () => {
-  return (
-    <HashRouter>
-    <Nav
-      onLinkClick={Header}
-      //selectedKey="key3"
-      ariaLabel="Nav basic example"
-      styles={navStyles}
-      groups={navLinkGroups}
-      
-    />
-    </HashRouter>
-  );
-};
-
-
-export const Nav2 : React.FunctionComponent = () => {
-  return(
-  <HashRouter>
-        <div>
+      </Stack>
+</div>
           <ul className="header">
-            <li><IconButton id="pokeb" className="pokeb" iconProps={home} title="Pokeball"  /><NavLink to="/">Home</NavLink></li>
+            <br />
+            <li><IconButton id="pokeb" className="pokeb" iconProps={home} title="Pokeball"  /><NavLink className="cat" to="/">Home</NavLink></li>
+                        <br />
+
             <li><IconButton id="pokeb" className="pokeb" iconProps={pokeIcon} title="Pokeball"  /><NavLink to="/pokemon/pokemon">Pokemon</NavLink></li>
+                        <br />
+
+            <li><IconButton id="pokeb" className="pokeb" iconProps={pokeIcon} title="Items"  /><NavLink to="/pokemon/pokemon">Items</NavLink></li>
+                        <br />
+
+            <li><IconButton id="pokeb" className="pokeb" iconProps={pokeIcon} title="Moves"  /><NavLink to="/pokemon/pokemon">Moves</NavLink></li>
+                        <br />
+
             <li><IconButton id="dico" className="dico" iconProps={dictionary} title="Glossary"  /><NavLink to="/Glossary">Glossary</NavLink></li>
+                        <br />
+
           </ul>
+          </div>
           <div className="content">
             <Route exact path="/" component={Home}/>
             <Route path="/pokemon/pokemon" component={ListP}/>
-            <Route path="/Glossary" component={Glossary}/>
-          </div>
+            <Route path="/Glossary" component={Glossary}/></div>
         </div>
       </HashRouter>
+      </Fragment>
   );
 }
 
