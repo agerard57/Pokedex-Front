@@ -8,6 +8,11 @@ And don't forget to put what your version was about down there!
 
 ---
 
+## V.20.12.29.19 :
+
+- Reorganized as taught
+- pokemonPage working
+
 ## V.20.12.24.15 :
 
 - New way of displaying the pokemons
